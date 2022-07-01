@@ -8348,7 +8348,13 @@ h1, h2, h3, h4, h5,
   margin: 5px 0px;
 }
   .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
+    outline: none; 
+  }
+  .btn.btn-primary:nth-child(2) {
+    background: #CECECE !important;
+    border: 1px solid #CECECE !important;
+    color: #fff !important; 
+    }
   .btn.btn-primary {
     background: #52A1C3 !important;
     border: 1px solid #52A1C3 !important;
