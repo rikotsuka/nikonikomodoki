@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html style="color:white;">
-<link rel="stylesheet" href="css/style.css">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ニコニコ動画風のコメント表示</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
- <script language="javascript" type="text/javascript">
+<link rel="stylesheet" href="css/style.css">
+<script language="javascript" type="text/javascript">
+
 
 window.onload = function(){
 //コメント1
@@ -44,23 +45,33 @@ document.getElementById("text3").innerHTML=mydata3;
 </script>
 </head>
 <body>
-
-<input name="mydata_in1" id="mydata_in1" type="text" value="" />
-<div>現在のコメント１には「　<span id="text1"></span>　」です</div>
+    <section class="ftco-section">
+        <div class="container">
+<form action="#" class="signin-form">
 <div class="form-group mt-3">
-<input type="button" value="コメント1を保存" onclick="save1();"/><br><br>
-</div>
+    <input name="mydata_in1" id="mydata_in1" type="text" value="" />
+    <div>現在のコメント１には「　<span id="text1"></span>　」です</div>
+        <div class="form-group mt-3">
+        <input type="button" value="コメント1を保存" onclick="save1();"/>
+        </div>
+    </div>
 
+<div class="form-group mt-3">
 <input name="mydata_in2" id="mydata_in2" type="text" value="" />
 <div>現在のコメント２は「　<span id="text2"></span>　」です</div>
 <div class="form-group mt-3">
-<input type="button" value="コメント2を保存" onclick="save2();"/><br><br>
+<input type="button" value="コメント2を保存" onclick="save2();"/>
+</div>
 </div>
 
+<div class="form-group mt-3">
 <input name="mydata_in3" id="mydata_in3" type="text" value="" />
 <div>現在のコメント３は「　<span id="text3"></span>　」です</div>
 <div class="form-group mt-3">
-<input type="button" value="コメント3を保存" onclick="save3();"/><br><br>
+<input type="button" value="コメント3を保存" onclick="save3();"/>
 </div>
+</div>
+</div>
+</section>
 </body>
 </html>
