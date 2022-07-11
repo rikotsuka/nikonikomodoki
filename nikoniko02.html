@@ -27,7 +27,7 @@ let count = 0;
   div_text.appendChild(document.createTextNode(localStorage.getItem('data1'))); //画面上に表示されるテキストを設定
   document.body.appendChild(div_text); //body直下へ挿入
 
-   //ライブラリを用いたテキスト移動のアニメーション： durationはアニメーションの時間、
+   //ライブラリを用いたテキスト移動のアニメーション:durationはアニメーションの時間、
    //        横方向の移動距離は「画面の横幅＋画面を流れるテキストの要素の横幅」、移動中に次の削除処理がされないようawait
   await gsap.to("#"+div_text.id, {duration: 30, x: -1*(document.documentElement.clientWidth+div_text.clientWidth)});
 
