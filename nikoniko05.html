@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style="background:#00FF00;">
+<html style="color:white;">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ニコニコ動画風のコメント表示</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+ <script language="javascript" type="text/javascript">
+
+window.onload = function(){
+//コメント1
+var token1 = localStorage.getItem("data1");
+document.getElementById("text1").innerHTML=token1;
+//コメント2
+var token2 = localStorage.getItem("data2");
+document.getElementById("text2").innerHTML=token2;
+//コメント3
+var token3 = localStorage.getItem("data3");
+document.getElementById("text3").innerHTML=token3;
+}
+
+// コメント1保存
+function save1() {
+var mydata1 = document.getElementById("mydata_in1").value;
+localStorage.setItem("data1", mydata1);
+document.getElementById("text1").innerHTML=mydata1;
+}
+
+// コメント2保存
+function save2() {
+var mydata2 = document.getElementById("mydata_in2").value;
+localStorage.setItem("data2", mydata2);
+document.getElementById("text2").innerHTML=mydata2;
+}
+
+// コメント3保存
+function save3() {
+var mydata3 = document.getElementById("mydata_in3").value;
+localStorage.setItem("data3", mydata3);
+document.getElementById("text3").innerHTML=mydata3;
+}
+
+</script>
+</head>
+<body>
+<input name="mydata_in1" id="mydata_in1" type="text" value="" />
+<div>現在のコメント１には「　<span id="text1"></span>　」です</div>
+<input type="button" value="コメント1を保存" onclick="save1();"/><br><br>
+
+<input name="mydata_in2" id="mydata_in2" type="text" value="" />
+<div>現在のコメント２は「　<span id="text2"></span>　」です</div>
+<input type="button" value="コメント2を保存" onclick="save2();"/><br><br>
+
+<input name="mydata_in3" id="mydata_in3" type="text" value="" />
+<div>現在のコメント３は「　<span id="text3"></span>　」です</div>
+<input type="button" value="コメント3を保存" onclick="save3();"/><br><br>
+
+</body>
+</html>
