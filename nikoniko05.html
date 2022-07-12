@@ -47,28 +47,50 @@ document.getElementById("text3").innerHTML=mydata3;
 <body>
     <section class="ftco-section">
         <div class="container">
+            <div class="row justify-content-center">
+				<div class="col-md-10 col-lg-8">
+            <div class="wrap">
+                <div class="login-wrap p-4 p-md-5">
 <form action="#" class="signin-form">
 <div class="form-group mt-3">
-    <input name="mydata_in1" id="mydata_in1" type="text" value="" />
+    <div class="d-flex">
+        <div class="w-100">
+            <h3 class="mb-2">あなたの強みに関して教えてください。</h3>
+        </div>
+    </div>
+    <input name="mydata_in1" id="mydata_in1" class="form-control"type="text" placeholder="(例)協調性"value="" />
     <div>現在のコメント１には「　<span id="text1"></span>　」です</div>
         <div class="form-group mt-3">
-        <input type="button" value="コメント1を保存" onclick="save1();"/>
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント1を保存" onclick="save1();"/>コメント1を保存</button>
         </div>
     </div>
 
 <div class="form-group mt-3">
-<input name="mydata_in2" id="mydata_in2" type="text" value="" />
+    <div class="d-flex">
+        <div class="w-100">
+            <h3 class="mb-2">あなたの強みに関して教えてください。</h3>
+        </div>
+    </div>
+<input name="mydata_in2" id="mydata_in2" class="form-control"type="text" placeholder="(例)協調性"value=""/>
 <div>現在のコメント２は「　<span id="text2"></span>　」です</div>
 <div class="form-group mt-3">
-<input type="button" value="コメント2を保存" onclick="save2();"/>
+<button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を保存" onclick="save2();"/>コメント2を保存</button>
 </div>
 </div>
 
 <div class="form-group mt-3">
-<input name="mydata_in3" id="mydata_in3" type="text" value="" />
+    <div class="d-flex">
+        <div class="w-100">
+            <h3 class="mb-2">あなたの強みに関して教えてください。</h3>
+        </div>
+    </div>
+<input name="mydata_in3" id="mydata_in3" class="form-control"type="text" placeholder="(例)協調性"value="" />
 <div>現在のコメント３は「　<span id="text3"></span>　」です</div>
 <div class="form-group mt-3">
-<input type="button" value="コメント3を保存" onclick="save3();"/>
+<button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を保存" onclick="save3();"/>コメント3を保存</button>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
