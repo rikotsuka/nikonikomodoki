@@ -30,7 +30,7 @@ let count = 0;
 
    //ライブラリを用いたテキスト移動のアニメーション： durationはアニメーションの時間、
    //        横方向の移動距離は「画面の横幅＋画面を流れるテキストの要素の横幅」、移動中に次の削除処理がされないようawait
-  await gsap.to("#"+div_text.id, {duration: 3, x: -1*(document.documentElement.clientWidth+div_text.clientWidth)});
+  await gsap.to("#"+div_text.id, {duration: 30, x: -1*(document.documentElement.clientWidth+div_text.clientWidth)});
 
   div_text.parentNode.removeChild(div_text); //画面上の移動終了後に削除
 }
