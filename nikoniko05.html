@@ -8,6 +8,33 @@
 <link rel="stylesheet" href="css/style.css">
 <script language="javascript" type="text/javascript">
 
+//定数
+let personal1 = "所属企業：";
+let personal2 = "担当プロジェクト：";
+let personal3 = "専門領域：";
+let personal4 = "強み：";
+
+window.onload = function(){
+//コメント1の情報取得
+document.getElementById("skill1").innerHTML=personal1;
+var token1 = localStorage.getItem("data1");
+document.getElementById("text1").innerHTML=token1;
+
+//コメント2の情報取得
+document.getElementById("skill2").innerHTML=personal2;
+var token2 = localStorage.getItem("data2");
+document.getElementById("text2").innerHTML=token2;
+
+//コメント3の情報取得
+document.getElementById("skill3").innerHTML=personal3;
+var token3 = localStorage.getItem("data3");
+document.getElementById("text3").innerHTML=token3;
+
+//コメント4の情報取得
+document.getElementById("skill4").innerHTML=personal3;
+var token3 = localStorage.getItem("data4");
+document.getElementById("text4").innerHTML=token3;
+}
 
 window.onload = function(){
 //コメント1
@@ -30,12 +57,26 @@ var mydata1 = document.getElementById("mydata_in1").value;
 localStorage.setItem("data1", mydata1);
 document.getElementById("text1").innerHTML=mydata1;
 }
+// コメント1削除
+function del1() {
+localStorage.setItem('data1', personal1);
+document.getElementById('text1').innerHTML="";
+var textform1=document.getElementById('mydata_in1');
+textform1.value="";
+}
 
 // コメント2保存
 function save2() {
 var mydata2 = document.getElementById("mydata_in2").value;
 localStorage.setItem("data2", mydata2);
 document.getElementById("text2").innerHTML=mydata2;
+}
+// コメント2削除
+function del2() {
+localStorage.setItem('data2', personal2);
+document.getElementById('text2').innerHTML="";
+var textform2=document.getElementById('mydata_in2');
+textform2.value="";
 }
 
 // コメント3保存
@@ -44,6 +85,13 @@ var mydata3 = document.getElementById("mydata_in3").value;
 localStorage.setItem("data3", mydata3);
 document.getElementById("text3").innerHTML=mydata3;
 }
+// コメント3削除
+function del3() {
+localStorage.setItem('data3', personal3);
+document.getElementById('text3').innerHTML="";
+var textform1=document.getElementById('mydata_in3');
+textform1.value="";
+}
 
 // コメント4保存
 function save4() {
@@ -51,7 +99,13 @@ var mydata4 = document.getElementById("mydata_in4").value;
 localStorage.setItem("data4", mydata4);
 document.getElementById("text4").innerHTML=mydata4;
 }
-
+// コメント4削除
+function del4() {
+localStorage.setItem('data4', personal4);
+document.getElementById('text4').innerHTML="";
+var textform1=document.getElementById('mydata_in4');
+textform1.value="";
+}
 </script>
 </head>
 <body>
@@ -69,10 +123,11 @@ document.getElementById("text4").innerHTML=mydata4;
         </div>
     </div>
     <input name="mydata_in1" id="mydata_in1" class="form-control"type="text" maxlength="15"placeholder="(例)産業技術大学院大学株式会社"value="" />
-    <div>現在のコメント１には「　<span id="text1"></span>　」です</div>
+    <div>(記載内容)：「<span id="skill1"></span><span id="text1"></span>　」</div>
         <div class="form-group mt-3">
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント1を保存" onclick="save1();"/>コメント1を保存</button>
-        </div>
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント1を削除" onclick="del1();"/>コメント1を削除</button>
+    </div>
     </div>
 
 <div class="form-group mt-3">
@@ -82,9 +137,10 @@ document.getElementById("text4").innerHTML=mydata4;
         </div>
     </div>
 <input name="mydata_in2" id="mydata_in2" class="form-control"type="text" maxlength="15"placeholder="(例)産業技術大学院大学株式会社にて、機械開発プロジェクトに従事。"value=""/>
-<div>現在のコメント２は「　<span id="text2"></span>　」です</div>
-<div class="form-group mt-3">
-<button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を保存" onclick="save2();"/>コメント2を保存</button>
+    <div>(記載内容)：「<span id="skill2"></span><span id="text2"></span>　」です</div>
+        <div class="form-group mt-3">
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を保存" onclick="save2();"/>コメント2を保存</button>
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を削除" onclick="del2();"/>コメント2を削除</button>
 </div>
 </div>
 
@@ -95,9 +151,10 @@ document.getElementById("text4").innerHTML=mydata4;
         </div>
     </div>
 <input name="mydata_in3" id="mydata_in3" class="form-control"type="text" maxlength="15"placeholder="(例)カメラ部品設計・検査、設計、材料、製造、試験、検査等に関連する技術基準の策定"value="" />
-<div>現在のコメント３は「　<span id="text3"></span>　」です</div>
-<div class="form-group mt-3">
-<button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を保存" onclick="save3();"/>コメント3を保存</button>
+<div>(記載内容)：「<span id="skill3"></span><span id="text3"></span>　」です</div>
+    <div class="form-group mt-3">
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を保存" onclick="save3();"/>コメント3を保存</button>
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を削除" onclick="del3();"/>コメント3を削除</button>
 </div>
 </div>
 
@@ -108,9 +165,10 @@ document.getElementById("text4").innerHTML=mydata4;
         </div>
     </div>
 <input name="mydata_in4" id="mydata_in4" class="form-control"type="text" maxlength="15"placeholder="(例)協調性,積極性"value="" />
-<div>現在のコメント4は「<span id="text4"></span>　」です</div>
-<div class="form-group mt-3">
-<button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント4を保存" onclick="save4();"/>コメント4を保存</button>
+ <div>(記載内容)：「<span id="skill4"></span><span id="text4"></span>　」です</div>
+    <div class="form-group mt-3">
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント4を保存" onclick="save4();"/>コメント4を保存</button>
+        <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント4を削除" onclick="del4();"/>コメント4を削除</button>
 </div>
 </div>
 
