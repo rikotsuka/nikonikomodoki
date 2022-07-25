@@ -19,6 +19,9 @@ document.getElementById("text2").innerHTML=token2;
 //コメント3
 var token3 = localStorage.getItem("data3");
 document.getElementById("text3").innerHTML=token3;
+//コメント3
+var token3 = localStorage.getItem("data4");
+document.getElementById("text4").innerHTML=token4;
 }
 
 // コメント1保存
@@ -65,7 +68,7 @@ document.getElementById("text4").innerHTML=mydata4;
             <h3 class="mb-2">1. 所属を書いてください。</h3>
         </div>
     </div>
-    <input name="mydata_in1" id="mydata_in1" class="form-control"type="text" placeholder="(例)産業技術大学院大学株式会社"value="" />
+    <input name="mydata_in1" id="mydata_in1" class="form-control"type="text" maxlength="15"placeholder="(例)産業技術大学院大学株式会社"value="" />
     <div>現在のコメント１には「　<span id="text1"></span>　」です</div>
         <div class="form-group mt-3">
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント1を保存" onclick="save1();"/>コメント1を保存</button>
@@ -78,7 +81,7 @@ document.getElementById("text4").innerHTML=mydata4;
             <h3 class="mb-2">2.担当したプロジェクトの詳細を教えてください。</h3>
         </div>
     </div>
-<input name="mydata_in2" id="mydata_in2" class="form-control"type="text" placeholder="(例)産業技術大学院大学株式会社にて、機械開発プロジェクトに従事。"value=""/>
+<input name="mydata_in2" id="mydata_in2" class="form-control"type="text" maxlength="15"placeholder="(例)産業技術大学院大学株式会社にて、機械開発プロジェクトに従事。"value=""/>
 <div>現在のコメント２は「　<span id="text2"></span>　」です</div>
 <div class="form-group mt-3">
 <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を保存" onclick="save2();"/>コメント2を保存</button>
@@ -91,7 +94,7 @@ document.getElementById("text4").innerHTML=mydata4;
             <h3 class="mb-2">3. 専門領域に関して教えてください。</h3>
         </div>
     </div>
-<input name="mydata_in3" id="mydata_in3" class="form-control"type="text" placeholder="(例)カメラ部品設計・検査、設計、材料、製造、試験、検査等に関連する技術基準の策定"value="" />
+<input name="mydata_in3" id="mydata_in3" class="form-control"type="text" maxlength="15"placeholder="(例)カメラ部品設計・検査、設計、材料、製造、試験、検査等に関連する技術基準の策定"value="" />
 <div>現在のコメント３は「　<span id="text3"></span>　」です</div>
 <div class="form-group mt-3">
 <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を保存" onclick="save3();"/>コメント3を保存</button>
@@ -104,7 +107,7 @@ document.getElementById("text4").innerHTML=mydata4;
             <h3 class="mb-2">4. あなたの強みに関して教えてください。</h3>
         </div>
     </div>
-<input name="mydata_in4" id="mydata_in4" class="form-control"type="text" placeholder="(例)協調性,積極性"value="" />
+<input name="mydata_in4" id="mydata_in4" class="form-control"type="text" maxlength="15"placeholder="(例)協調性,積極性"value="" />
 <div>現在のコメント4は「<span id="text4"></span>　」です</div>
 <div class="form-group mt-3">
 <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント4を保存" onclick="save4();"/>コメント4を保存</button>
