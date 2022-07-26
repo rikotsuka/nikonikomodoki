@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background:#154200;">
+<html style="background:#00FF00;">
 <html style="color:white;">
 <head>
 <meta charset="utf-8" />
@@ -7,15 +7,91 @@
 <title>ニコニコ動画風のコメント表示</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
  <script language="javascript" type="text/javascript">
-      // コメント1
-      function save1() {
-        var mydata = document.getElementById("mydata_in1").value;
-        localStorage.setItem('data1', mydata);
-      }
-    </script>
+
+//定数
+let personal1 = "強み1：";
+let personal2 = "強み2：";
+let personal3 = "強み3：";
+
+window.onload = function(){
+//コメント1の情報取得
+document.getElementById("skill1").innerHTML=personal1;
+var token1 = localStorage.getItem("data1");
+document.getElementById("text1").innerHTML=token1;
+
+//コメント2の情報取得
+document.getElementById("skill2").innerHTML=personal2;
+var token2 = localStorage.getItem("data2");
+document.getElementById("text2").innerHTML=token2;
+
+//コメント3の情報取得
+document.getElementById("skill3").innerHTML=personal3;
+var token3 = localStorage.getItem("data3");
+document.getElementById("text3").innerHTML=token3;
+}
+
+// コメント1保存
+function save1() {
+var mydata1 = document.getElementById("mydata_in1").value;
+var per_my1 = personal1 + mydata1;
+localStorage.setItem("data1", per_my1 );//per_my1を代入
+document.getElementById("text1").innerHTML=mydata1;//mydata1を表示
+}
+// コメント1削除
+function del1() {
+localStorage.setItem('data1', personal1);
+document.getElementById('text1').innerHTML="";
+var textform1=document.getElementById('mydata_in1');
+textform1.value="";
+}
+
+// コメント2保存
+function save2() {
+var mydata2 = document.getElementById("mydata_in2").value;
+var per_my2 = personal2 + mydata2;
+localStorage.setItem("data2", per_my2);//per_my2を代入
+document.getElementById("text2").innerHTML=mydata2;//mydata2を表示
+}
+// コメント2削除
+function del2() {
+
+localStorage.setItem('data2', personal2);
+document.getElementById('text2').innerHTML="";
+var textform2=document.getElementById('mydata_in2');
+textform2.value="";
+}
+
+// コメント3保存
+function save3() {
+var mydata3 = document.getElementById("mydata_in3").value;
+per_my3 = personal3 + mydata3;
+localStorage.setItem("data3", per_my3);//per_my3を代入
+document.getElementById("text3").innerHTML=mydata3;//mydata3を表示
+}
+// コメント3削除
+function del3() {
+localStorage.setItem('data3', personal3);
+document.getElementById('text3').innerHTML="";
+var textform1=document.getElementById('mydata_in3');
+textform1.value="";
+}
+</script>
 </head>
 <body>
-    <input name="mydata_in1" id="mydata_in1" type="text" value="" /><br>
-    <input type="button" value="コメント1を保存" onclick="save1();"/><br>
+    <input name="mydata_in1" id="mydata_in1" type="text" value="" />
+　　<div>現在のコメント１は「<span id="skill1"></span><span id="text1"></span>　」です</div>
+    <input type="button" value="コメント1を保存" onclick="save1();"/>
+    <input type="button" value="コメント1を削除" onclick="del1();"/><br><br>
+
+    <input name="mydata_in2" id="mydata_in2" type="text" value="" />
+　　<div>現在のコメント２は「<span id="skill2"></span><span id="text2"></span>　」です</div>
+    <input type="button" value="コメント2を保存" onclick="save2();"/>
+    <input type="button" value="コメント2を削除" onclick="del2();"/><br><br>
+
+    <input name="mydata_in3" id="mydata_in3" type="text" value="" />
+　　<div>現在のコメント３は「<span id="skill3"></span><span id="text3"></span>　」です</div>
+    <input type="button" value="コメント3を保存" onclick="save3();"/>
+    <input type="button" value="コメント3を削除" onclick="del3();"/><br><br>
+
 </body>
 </html>

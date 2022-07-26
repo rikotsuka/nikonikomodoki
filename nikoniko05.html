@@ -9,104 +9,102 @@
 <script language="javascript" type="text/javascript">
 
 //定数
-let personal1 = "所属企業：";
-let personal2 = "担当プロジェクト：";
-let personal3 = "専門領域：";
-let personal4 = "強み：";
+let par1 = "所属企業：";
+let par2 = "担当プロジェクト：";
+let par3 = "専門領域：";
+let par4 = "強み：";
 
 window.onload = function(){
-//コメント1の情報取得
-document.getElementById("skill1").innerHTML=personal1;
-var token1 = localStorage.getItem("data1");
-document.getElementById("text1").innerHTML=token1;
-
-//コメント2の情報取得
-document.getElementById("skill2").innerHTML=personal2;
-var token2 = localStorage.getItem("data2");
-document.getElementById("text2").innerHTML=token2;
-
-//コメント3の情報取得
-document.getElementById("skill3").innerHTML=personal3;
-var token3 = localStorage.getItem("data3");
-document.getElementById("text3").innerHTML=token3;
-
-//コメント4の情報取得
-document.getElementById("skill4").innerHTML=personal3;
-var token3 = localStorage.getItem("data4");
-document.getElementById("text4").innerHTML=token3;
+hyouzi()
 }
 
-window.onload = function(){
-//コメント1
+function hyouzi(){
 var token1 = localStorage.getItem("data1");
+// nullか確認
+if (token1 == "") {
+document.getElementById("text1").innerHTML=par1;
+}else{
 document.getElementById("text1").innerHTML=token1;
-//コメント2
+}
+
 var token2 = localStorage.getItem("data2");
+// nullか確認
+if (token2 == "") {
+document.getElementById("text2").innerHTML=par2;
+}else{
 document.getElementById("text2").innerHTML=token2;
-//コメント3
+}
+
 var token3 = localStorage.getItem("data3");
+// nullか確認
+if (token3 == "") {
+document.getElementById("text3").innerHTML=par3;
+}else{
 document.getElementById("text3").innerHTML=token3;
-//コメント4
+}
+
 var token4 = localStorage.getItem("data4");
+// nullか確認
+if (token4 == "") {
+document.getElementById("text4").innerHTML=par4;
+}else{
 document.getElementById("text4").innerHTML=token4;
+}
 }
 
 // コメント1保存
 function save1() {
-var mydata1 = document.getElementById("mydata_in1").value;
+var mydata1 = par1+document.getElementById("mydata_in1").value;
 localStorage.setItem("data1", mydata1);
-document.getElementById("text1").innerHTML=mydata1;
+hyouzi();
 }
 // コメント1削除
 function del1() {
-localStorage.setItem('data1', personal1);
-document.getElementById('text1').innerHTML="";
-var textform1=document.getElementById('mydata_in1');
-textform1.value="";
+localStorage.setItem("data1",par1);
+document.getElementById("mydata_in1").value="";
+hyouzi();
 }
 
 // コメント2保存
 function save2() {
-var mydata2 = document.getElementById("mydata_in2").value;
+var mydata2 =par2+document.getElementById("mydata_in2").value;
 localStorage.setItem("data2", mydata2);
-document.getElementById("text2").innerHTML=mydata2;
+hyouzi();
 }
 // コメント2削除
 function del2() {
-localStorage.setItem('data2', personal2);
-document.getElementById('text2').innerHTML="";
-var textform2=document.getElementById('mydata_in2');
-textform2.value="";
+localStorage.setItem("data2",par2);
+document.getElementById("mydata_in2").value="";
+hyouzi();
 }
 
 // コメント3保存
 function save3() {
-var mydata3 = document.getElementById("mydata_in3").value;
+var mydata3 = par3+document.getElementById("mydata_in3").value;
 localStorage.setItem("data3", mydata3);
-document.getElementById("text3").innerHTML=mydata3;
+hyouzi();
 }
 // コメント3削除
 function del3() {
-localStorage.setItem('data3', personal3);
-document.getElementById('text3').innerHTML="";
-var textform1=document.getElementById('mydata_in3');
-textform1.value="";
+localStorage.setItem("data3",par3);
+document.getElementById("mydata_in3").value="";
+hyouzi();
 }
 
 // コメント4保存
 function save4() {
-var mydata4 = document.getElementById("mydata_in4").value;
+var mydata4 = par4+document.getElementById("mydata_in4").value;
 localStorage.setItem("data4", mydata4);
-document.getElementById("text4").innerHTML=mydata4;
+hyouzi();
 }
 // コメント4削除
 function del4() {
-localStorage.setItem('data4', personal4);
-document.getElementById('text4').innerHTML="";
-var textform1=document.getElementById('mydata_in4');
-textform1.value="";
+localStorage.setItem("data4",par4);
+document.getElementById("mydata_in4").value="";
+hyouzi();
 }
 </script>
+
 </head>
 <body>
     <section class="ftco-section">
@@ -129,6 +127,7 @@ textform1.value="";
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント1を削除" onclick="del1();"/>コメント1を削除</button>
     </div>
     </div>
+</form>
 
 <div class="form-group mt-3">
     <div class="d-flex">
@@ -143,6 +142,7 @@ textform1.value="";
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント2を削除" onclick="del2();"/>コメント2を削除</button>
 </div>
 </div>
+</form>
 
 <div class="form-group mt-3">
     <div class="d-flex">
@@ -157,6 +157,7 @@ textform1.value="";
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント3を削除" onclick="del3();"/>コメント3を削除</button>
 </div>
 </div>
+</form>
 
 <div class="form-group mt-3">
     <div class="d-flex">
@@ -171,6 +172,7 @@ textform1.value="";
         <button type="button" class="form-control btn btn-primary rounded submit px-3"value="コメント4を削除" onclick="del4();"/>コメント4を削除</button>
 </div>
 </div>
+</form>
 
 <a href="https://us04web.zoom.us/j/3666371634?pwd=aFlwa0pTMzVwK3p0RWpndCtiUEJ4dz09" class="btn-gradient-simple">通話を始める</a>
 </div>
