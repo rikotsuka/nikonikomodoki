@@ -51,7 +51,6 @@ document.getElementById("text4").innerHTML=par4;
 document.getElementById("text4").innerHTML=token4;
 }
 }
-
 // コメント1保存
 function save1() {
 var mydata1 = par1+document.getElementById("mydata_in1").value;
@@ -84,7 +83,7 @@ var mydata3 = par3+document.getElementById("mydata_in3").value;
 localStorage.setItem("data3", mydata3);
 hyouzi();
 }
-// コメント3削除
+// コメント2削除
 function del3() {
 localStorage.setItem("data3",par3);
 document.getElementById("mydata_in3").value="";
@@ -104,7 +103,6 @@ document.getElementById("mydata_in4").value="";
 hyouzi();
 }
 </script>
-
 </head>
 <body>
     <section class="ftco-section">
