@@ -7,104 +7,14 @@
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 <script language="javascript" type="text/javascript">
-
-//定数
-let par1 = "所属企業：";
-let par2 = "担当プロジェクト：";
-let par3 = "専門領域：";
-let par4 = "強み：";
-
-window.onload = function(){
-hyouzi()
-}
-
-function hyouzi(){
-var token1 = localStorage.getItem("data1");
-// nullか確認
-if (token1 == "") {
-document.getElementById("text1").innerHTML=par1;
-}else{
-document.getElementById("text1").innerHTML=token1;
-}
-
-var token2 = localStorage.getItem("data2");
-// nullか確認
-if (token2 == "") {
-document.getElementById("text2").innerHTML=par2;
-}else{
-document.getElementById("text2").innerHTML=token2;
-}
-
-var token3 = localStorage.getItem("data3");
-// nullか確認
-if (token3 == "") {
-document.getElementById("text3").innerHTML=par3;
-}else{
-document.getElementById("text3").innerHTML=token3;
-}
-
-var token4 = localStorage.getItem("data4");
-// nullか確認
-if (token4 == "") {
-document.getElementById("text4").innerHTML=par4;
-}else{
-document.getElementById("text4").innerHTML=token4;
-}
-}
-// コメント1保存
-function save1() {
-var mydata1 = par1+document.getElementById("mydata_in1").value;
-localStorage.setItem("data1", mydata1);
-hyouzi();
-}
-// コメント1削除
-function del1() {
-localStorage.setItem("data1",par1);
-document.getElementById("mydata_in1").value="";
-hyouzi();
-}
-
-// コメント2保存
-function save2() {
-var mydata2 =par2+document.getElementById("mydata_in2").value;
-localStorage.setItem("data2", mydata2);
-hyouzi();
-}
-// コメント2削除
-function del2() {
-localStorage.setItem("data2",par2);
-document.getElementById("mydata_in2").value="";
-hyouzi();
-}
-
-// コメント3保存
-function save3() {
-var mydata3 = par3+document.getElementById("mydata_in3").value;
-localStorage.setItem("data3", mydata3);
-hyouzi();
-}
-// コメント2削除
-function del3() {
-localStorage.setItem("data3",par3);
-document.getElementById("mydata_in3").value="";
-hyouzi();
-}
-
-// コメント4保存
-function save4() {
-var mydata4 = par4+document.getElementById("mydata_in4").value;
-localStorage.setItem("data4", mydata4);
-hyouzi();
-}
-// コメント4削除
-function del4() {
-localStorage.setItem("data4",par4);
-document.getElementById("mydata_in4").value="";
-hyouzi();
-}
 </script>
 <body>
+    <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="images/service_logo.png"width="150"height="30"alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -127,6 +37,7 @@ hyouzi();
           </ul>
         </div>
       </nav>
+    </header>
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
