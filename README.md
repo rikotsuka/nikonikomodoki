@@ -32,8 +32,8 @@
 
 
 
-### BackGroundRemovalの使い方
-#### やり方は以下の記事に詳しく書いてあります。
+## BackGroundRemovalの使い方
+やり方は以下の記事に詳しく書いてあります。
 
 https://gigazine.net/news/20220403-obs-backgroundremoval/
 
@@ -42,7 +42,7 @@ https://gigazine.net/news/20220403-obs-backgroundremoval/
 
 https://github.com/royshil/obs-backgroundremoval/releases
 
-Windowsは以下から
+Windowsは以下からインストール
 
 <img width="720" alt="スクリーンショット 2022-09-03 21 12 51" src="https://user-images.githubusercontent.com/33302983/188269926-b3a61a79-a49a-42f8-856a-2fb1d87a7948.png">
 
