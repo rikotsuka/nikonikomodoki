@@ -62,10 +62,6 @@ Windowsは以下からインストール
 ### Zoomに繋ぐ方法
 1.OBSの仮想カメラを起動
 
-<img width="743" alt="スクリーンショット 2022-09-03 21 19 59" src="https://user-images.githubusercontent.com/33302983/188270206-6a90ca6f-d68c-436e-acbb-f8e0e5d24bac.png">
-
-↑右下のやつを押す
-
 2.ZoomのカメラもOBS virtual cameraを選択
 
 <img width="571" alt="スクリーンショット 2022-09-03 21 24 14" src="https://user-images.githubusercontent.com/33302983/188270250-6d6e09c9-9eb8-400f-adc7-114c2aba2b92.png">
