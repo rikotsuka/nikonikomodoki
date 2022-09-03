@@ -11,7 +11,6 @@
 - ２、シーンを追加（＋ボタンを押す）
 <img width="213" alt="スクリーンショット 2022-09-03 18 05 10" src="https://user-images.githubusercontent.com/33302983/188263882-d7e634a4-1cb4-4c5d-a99e-7e4ca7785ea6.png">
 ー　3、映像キャプチャを追加（自分の顔を映すやつ）
-<img width="813" alt="スクリーンショット 2022-09-03 18 23 34" src="https://user-images.githubusercontent.com/33302983/188264473-0e6d3948-6bef-47db-8587-b8e4fd19f8d2.png">
 ※プロパティからカメラの設定を自分のOS内蔵のカメラに変更するのを忘れずに
 ー　４、ウィンドウキャプチャを追加（どのウィンドウを映し出すかを選択する）
 <img width="878" alt="スクリーンショット 2022-09-03 18 15 59" src="https://user-images.githubusercontent.com/33302983/188264231-69bbd155-9be2-4bc0-93df-b9af2c4b653a.png">
