@@ -5419,7 +5419,7 @@ button.bg-dark:focus {
     border-radius: 3px;
     font-weight: bold;
     color: #FFF;
-    background-image: linear-gradient(45deg, #709dff 0%, #b0c9ff 100%);
+    background-image: linear-gradient(45deg, #52a1c3 0%, #b0c9ff 100%);
     transition: .4s;
     width: 100%;
     text-align: center;
