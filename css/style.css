@@ -8375,8 +8375,8 @@ h1, h2, h3, h4, h5,
     }
   .btn.btn-primary {
     background: #52A1C3 ;
-    border: 1px solid #52A1C3 !important;
-    color: #fff !important; }
+    border: 1px solid #52A1C3;
+    color: #fff; }
     .btn.btn-primary:hover {
       border: 1px solid #52A1C3;
       background: transparent;
