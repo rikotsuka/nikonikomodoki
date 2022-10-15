@@ -1,6 +1,6 @@
 
 //定数
-let par1 = "所属企業：";
+let par1 = "所属：";
 let par2 = "担当プロジェクト：";
 let par3 = "専門領域：";
 let par4 = "強み：";
